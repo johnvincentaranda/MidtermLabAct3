@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Seminar Registration</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<h1>IT Seminar Registration</h1>
+
+<form id="registrationForm" novalidate>
+  <div class="field">
+    <label for="fullName">Full name</label>
+    <input type="text" id="fullName" required aria-describedby="fullNameError">
+    <span class="error" id="fullNameError"></span>
+  </div>
+
+  <div class="field">
+    <label for="studentNumber">Student number</label>
+    <input type="text" id="studentNumber" required aria-describedby="studentNumberError" placeholder="24-1234-123">
+    <span class="error" id="studentNumberError"></span>
+  </div>
+
+  <div class="field">
+    <label for="email">Email address</label>
+    <input type="email" id="email" required aria-describedby="emailError">
+    <span class="error" id="emailError"></span>
+  </div>
+
+  <div class="field">
+    <label for="mobileNumber">Mobile number</label>
+    <input type="tel" id="mobileNumber" required aria-describedby="mobileNumberError" placeholder="09123456789 or +639123456789">
+    <span class="error" id="mobileNumberError"></span>
+  </div>
+
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" required aria-describedby="passwordError">
+    <span class="feedback" id="passwordFeedback"></span>
+    <span class="error" id="passwordError"></span>
+  </div>
+
+  <div class="field">
+    <label for="confirmPassword">Confirm password</label>
+    <input type="password" id="confirmPassword" required aria-describedby="confirmPasswordError">
+    <span class="error" id="confirmPasswordError"></span>
+  </div>
+
+  <div class="field">
+    <label for="course">Course</label>
+    <select id="course" required aria-describedby="courseError">
+      <option value="" disabled selected>Select your course</option>
+      <option value="BSIT">BSIT</option>
+      <option value="BSCS">BSCS</option>
+    </select>
+    <span class="error" id="courseError"></span>
+  </div>
+
+  <div class="field checkbox-field">
+    <input type="checkbox" id="terms" required aria-describedby="termsError">
+    <label for="terms">I agree to the terms and conditions</label>
+    <span class="error" id="termsError"></span>
+  </div>
+
+  <div class="buttons">
+    <button type="submit" id="registerBtn">Register</button>
+    <button type="reset" id="resetBtn">Reset</button>
+  </div>
+</form>
+
+<div id="successMessage" class="success"></div>
+
+<div id="registrationSummary" hidden>
+  <h2>Registration Summary</h2>
+  <p>Full Name: <span id="summaryName"></span></p>
+  <p>Student Number: <span id="summaryStudentNumber"></span></p>
+  <p>Email: <span id="summaryEmail"></span></p>
+  <p>Mobile: <span id="summaryMobileNumber"></span></p>
+  <p>Course: <span id="summaryCourse"></span></p>
+</div>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
